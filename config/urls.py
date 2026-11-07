@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+admin.site.site_header = 'InvenLote'
+admin.site.site_title = 'InvenLote'
+admin.site.index_title = 'Panel de inventario multialmacén'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]

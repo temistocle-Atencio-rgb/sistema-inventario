@@ -1,0 +1,35 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:"InvenLote" }}{% endblock %}
+
+{% block extrastyle %}{{ block.super }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="{% static 'invenlote/admin.css' %}">
+<link rel="icon" type="image/svg+xml" href="{% static 'invenlote/cubo.svg' %}">
+{% endblock %}
+
+{% block branding %}
+<div id="site-name">
+  <a class="invenlote-brand" href="{% url 'admin:index' %}">
+    {# Cubo del logo en su versión blanca: tres caras con opacidad 1, 0.8 y 0.6 #}
+    <svg class="invenlote-cubo" viewBox="0 0 259.8 300" aria-hidden="true" focusable="false">
+      <polygon fill="#FFFFFF" fill-opacity="1" points="0,75 129.9,0 259.8,75 129.9,150"/>
+      <polygon fill="#FFFFFF" fill-opacity=".8" points="0,75 129.9,150 129.9,300 0,225"/>
+      <polygon fill="#FFFFFF" fill-opacity=".6" points="129.9,150 259.8,75 259.8,225 129.9,300"/>
+    </svg>
+    <span>{{ site_header|default:"InvenLote" }}</span>
+  </a>
+</div>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block footer %}
+<div id="footer">InvenLote · Sistema de inventario multialmacén</div>
+{% endblock %}

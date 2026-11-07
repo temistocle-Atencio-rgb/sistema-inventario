@@ -1,0 +1,240 @@
+/*
+  InvenLote: marca para el panel de administración de Django.
+  Solo cambia colores, tipografía y logo. No toca ningún modelo ni ninguna vista.
+  Paleta del manual de marca: azul #005198, azul profundo #003A73, naranja #F28C1B (solo acento).
+  Las variables siguen el mismo esquema que Django (tema claro, oscuro automático y oscuro manual).
+*/
+
+/* Tema claro (también cuando el sistema está en modo automático) */
+html[data-theme="light"],
+:root {
+  --primary: #005198;
+  --secondary: #003A73;
+  --accent: #F28C1B;
+  --primary-fg: #FFFFFF;
+  --body-fg: #1F2933;
+  --body-bg: #FFFFFF;
+  --body-quiet-color: #5B6670;
+  --body-medium-color: #3E4A56;
+  --body-loud-color: #000000;
+  --header-color: #E6EEF6;
+  --header-branding-color: #FFFFFF;
+  --header-bg: #005198;
+  --header-link-color: #FFFFFF;
+  --breadcrumbs-fg: #C9D9EA;
+  --breadcrumbs-link-fg: #FFFFFF;
+  --breadcrumbs-bg: #003A73;
+  --link-fg: #005198;
+  --link-hover-color: #003A73;
+  --link-selected-fg: #003A73;
+  --hairline-color: #E3E7EC;
+  --border-color: #C9CFD6;
+  --error-fg: #B03030;
+  --message-info-bg: #E3EEF9;
+  --message-success-bg: #DDF1E4;
+  --message-warning-bg: #FDEBD3;
+  --message-error-bg: #FBE3E3;
+  --darkened-bg: #F2F4F7;
+  --selected-bg: #E3EEF9;
+  --selected-row: #EAF1F8;
+  --button-fg: #FFFFFF;
+  --button-bg: #005198;
+  --button-hover-bg: #003A73;
+  --default-button-bg: #F28C1B;
+  --default-button-hover-bg: #D97A0F;
+  --close-button-bg: #5B6670;
+  --close-button-hover-bg: #1F2933;
+  --delete-button-bg: #B03030;
+  --delete-button-hover-bg: #8F2323;
+  --object-tools-fg: #FFFFFF;
+  --object-tools-bg: #005198;
+  --object-tools-hover-bg: #003A73;
+  --font-family-primary: "Inter","Segoe UI",system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+/* Tema oscuro cuando el sistema del usuario lo pide */
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"],
+  :root {
+    --primary: #0B3F73;
+    --secondary: #002A55;
+    --accent: #F28C1B;
+    --primary-fg: #F7F7F7;
+    --body-fg: #EEEEEE;
+    --body-bg: #121821;
+    --body-quiet-color: #C4CCD4;
+    --body-medium-color: #DDE3E9;
+    --body-loud-color: #FFFFFF;
+    --header-color: #E6EEF6;
+    --header-branding-color: #FFFFFF;
+    --header-bg: #003A73;
+    --header-link-color: #FFFFFF;
+    --breadcrumbs-fg: #B7CBE0;
+    --breadcrumbs-link-fg: #FFFFFF;
+    --breadcrumbs-bg: #002A55;
+    --link-fg: #8FC2EE;
+    --link-hover-color: #BBDDF8;
+    --link-selected-fg: #8FC2EE;
+    --hairline-color: #26303B;
+    --border-color: #37424E;
+    --error-fg: #F08A8A;
+    --message-info-bg: #14395F;
+    --message-success-bg: #14502D;
+    --message-warning-bg: #5A3A0B;
+    --message-error-bg: #5A1B1B;
+    --darkened-bg: #1A222D;
+    --selected-bg: #0F1620;
+    --selected-row: #12324F;
+    --button-fg: #FFFFFF;
+    --button-bg: #0B5CAB;
+    --button-hover-bg: #1A74CC;
+    --default-button-bg: #F28C1B;
+    --default-button-hover-bg: #FFA33D;
+    --close-button-bg: #3A4552;
+    --close-button-hover-bg: #66727F;
+    --delete-button-bg: #B03030;
+    --delete-button-hover-bg: #CC4242;
+    --object-tools-fg: #FFFFFF;
+    --object-tools-bg: #0B5CAB;
+    --object-tools-hover-bg: #1A74CC;
+    --font-family-primary: "Inter","Segoe UI",system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+}
+
+/* Tema oscuro elegido a mano en el botón del panel */
+html[data-theme="dark"] {
+  --primary: #0B3F73;
+  --secondary: #002A55;
+  --accent: #F28C1B;
+  --primary-fg: #F7F7F7;
+  --body-fg: #EEEEEE;
+  --body-bg: #121821;
+  --body-quiet-color: #C4CCD4;
+  --body-medium-color: #DDE3E9;
+  --body-loud-color: #FFFFFF;
+  --header-color: #E6EEF6;
+  --header-branding-color: #FFFFFF;
+  --header-bg: #003A73;
+  --header-link-color: #FFFFFF;
+  --breadcrumbs-fg: #B7CBE0;
+  --breadcrumbs-link-fg: #FFFFFF;
+  --breadcrumbs-bg: #002A55;
+  --link-fg: #8FC2EE;
+  --link-hover-color: #BBDDF8;
+  --link-selected-fg: #8FC2EE;
+  --hairline-color: #26303B;
+  --border-color: #37424E;
+  --error-fg: #F08A8A;
+  --message-info-bg: #14395F;
+  --message-success-bg: #14502D;
+  --message-warning-bg: #5A3A0B;
+  --message-error-bg: #5A1B1B;
+  --darkened-bg: #1A222D;
+  --selected-bg: #0F1620;
+  --selected-row: #12324F;
+  --button-fg: #FFFFFF;
+  --button-bg: #0B5CAB;
+  --button-hover-bg: #1A74CC;
+  --default-button-bg: #F28C1B;
+  --default-button-hover-bg: #FFA33D;
+  --close-button-bg: #3A4552;
+  --close-button-hover-bg: #66727F;
+  --delete-button-bg: #B03030;
+  --delete-button-hover-bg: #CC4242;
+  --object-tools-fg: #FFFFFF;
+  --object-tools-bg: #0B5CAB;
+  --object-tools-hover-bg: #1A74CC;
+  --font-family-primary: "Inter","Segoe UI",system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+/* ---------- Ajustes de forma (radio de 5 px, sombra suave, tipografía) ---------- */
+body { font-family: var(--font-family-primary); }
+
+h1, h2, h3, #site-name, #content-related h2, .module caption, .module h2 {
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+}
+h1 { font-weight: 600; color: var(--body-fg); }
+#content > h1::before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 3px;
+  margin-bottom: 10px;
+  background: #F28C1B; /* línea naranja corta sobre cada título, como pide el manual */
+}
+
+/* Cabecera con el logo */
+#header { box-shadow: 0 2px 8px rgba(0, 0, 0, .12); }
+#site-name { margin: 0; }
+#site-name a.invenlote-brand,
+#site-name a.invenlote-brand:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+#site-name a.invenlote-brand:hover { color: #FFFFFF; opacity: .92; }
+.invenlote-cubo { width: 26px; height: auto; flex: none; }
+.login #site-name a.invenlote-brand { font-size: 1.7rem; }
+
+/* Botón principal naranja con texto oscuro (el contraste del blanco sobre naranja no cumple) */
+.button.default, input[type=submit].default, .submit-row input.default {
+  color: #1F2933;
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  font-weight: 600;
+}
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+  border-radius: 5px;
+}
+
+/* Tarjetas, tablas y campos */
+.module, .inline-group, #changelist .paginator, fieldset.module {
+  border-radius: 5px;
+}
+.module { box-shadow: 0 2px 8px rgba(0, 0, 0, .06); }
+.module h2, .module caption, .inline-group h2 {
+  border-radius: 5px 5px 0 0;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+thead th, #changelist table thead th {
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+input[type=text], input[type=number], input[type=password], input[type=email],
+input[type=url], input[type=date], input[type=datetime], select, textarea {
+  border-radius: 5px;
+}
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid #005198;
+  outline-offset: 1px;
+  border-color: #005198;
+}
+
+/* Pie en azul profundo */
+#footer {
+  display: block;
+  padding: 10px 20px;
+  background: #003A73;
+  color: #C9D9EA;
+  font-size: .75rem;
+  text-align: center;
+}
+.login #footer { background: transparent; color: var(--body-quiet-color); }
+
+/* Botón de entrar al panel también naranja: es la acción principal de esa pantalla */
+.login .submit-row input[type=submit] {
+  background: #F28C1B;
+  color: #1F2933;
+  font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
+  font-weight: 600;
+}
+.login .submit-row input[type=submit]:hover { background: #D97A0F; }
+#content-related .module { box-shadow: none; }

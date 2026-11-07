@@ -112,13 +112,19 @@ python -m pip install -r requirements.txt
 python manage.py migrate
 ```
 
-5. Iniciar el servidor:
+5. Cargar los datos de demostración (3 registros por tabla; se puede ejecutar varias veces sin duplicar):
+
+```
+python manage.py cargar_demo
+```
+
+6. Iniciar el servidor:
 
 ```
 python manage.py runserver
 ```
 
-6. Abrir http://127.0.0.1:8000/admin/
+7. Abrir http://127.0.0.1:8000/admin/
 
 ## Credenciales del administrador
 
